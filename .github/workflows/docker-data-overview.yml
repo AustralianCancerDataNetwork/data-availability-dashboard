@@ -1,0 +1,59 @@
+# Pipeline to build and push the AusCAT Data Availabilty Docker Image
+# to the `auscat` DockerHub and to the australiancancerdatanetwork/auscat_etl
+# GitHub Container Registry (GHCR)
+name: Data Availability Docker Image Build/Push
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+on:
+  push:
+    branches: 
+      - 'main'
+
+jobs:
+  build-push:
+    name: Build/Push Data Availability Docker Image to GHCR and DockerHub
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+    - name: Checkout `auscat_etl` repository
+      uses: actions/checkout@v3
+
+    - name: Login to GHCR
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Login to DockerHub
+      uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Extract metadata for Docker
+      id: meta
+      uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+      with:
+        images: auscat/data_availability_dashboard
+
+    - name: Build and push Docker Image to Dockerhub 
+      uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+      with:
+        context: ./dashboard
+        push: true
+        tags: auscat/data_availability_dashboard:latest
+
+    - name: Build and Push Docker Image to GHCR
+      uses: docker/build-push-action@v3
+      with:
+        context: ./dashboard
+        push: true
+        tags: ghcr.io/australiancancerdatanetwork/auscat/data_availability_dashboard:latest
