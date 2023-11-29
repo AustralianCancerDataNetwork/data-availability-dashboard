@@ -1,0 +1,31 @@
+version: "3.3"
+
+# Services for development purposes only
+# This is mapping the services to the localhost, assuming that the databases are
+# hosted on the host machine by default.
+
+services:
+  auscat_data_availability_dash:
+    image: auscat/data_availability_dashboard:latest
+    # if running development, then most likely postgres DBs are running 
+    # locally, so allow container to interface with localhost network
+    network_mode: "host"
+    environment:
+      PYTHONPATH: /python
+      # if running development, then most likely postgres DBs are 
+      # running locally, so redis container should also be set to interface 
+      # with localhost network
+      CELERY_HOSTNAME: localhost
+    volumes:
+      - .:/workspace
+
+  redis:
+    image: redis:latest
+    # if running development, then most likely postgres DBs are running 
+    # locally, so allow container to interface with localhost network
+    network_mode: "host"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:

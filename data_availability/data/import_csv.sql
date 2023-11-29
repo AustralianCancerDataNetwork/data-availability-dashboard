@@ -1,0 +1,3 @@
+COPY medical 
+FROM STDIN 
+DELIMITER ',' CSV HEADER

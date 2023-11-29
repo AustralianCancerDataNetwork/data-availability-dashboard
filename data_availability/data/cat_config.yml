@@ -1,0 +1,5 @@
+dbUser: admin
+dbPass: admin
+dbname: cat_db
+hostname: localhost
+portnumber: 5434

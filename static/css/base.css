@@ -1,0 +1,61 @@
+html {
+    height: 100%;
+}
+
+body {
+    padding: 70px 20px 20px 20px;
+    font-size: 14px;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.wrapper-expanded {
+    display: flex;
+    height: 100%;
+}
+.flex-expanded {
+    flex: 1 1 auto;
+}
+
+.login {
+    width: 400px;
+    height: 230px;
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+
+    margin: auto;
+}
+
+.table > tbody > tr > td.hiddenRow {
+	padding: 0;
+}
+
+.relative-position {
+	position: relative;
+}
+
+.show-hide {
+}
+
+.show-hide.ng-hide {
+	opacity: 0;
+}
+
+
+.show-hide.ng-hide-remove,
+.show-hide.ng-hide-add {
+	transition: all linear 0.5s;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}

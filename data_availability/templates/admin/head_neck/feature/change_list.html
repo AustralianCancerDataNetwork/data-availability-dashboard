@@ -1,0 +1,13 @@
+{% extends "admin/change_list.html" %}
+{% block object-tools-items %}
+
+    {{ block.super }}
+
+    <li>
+        <a href="export/">Export Features to JSON</a>
+    </li>
+    <li>
+        <a href="import/">Import Features from JSON</a>
+    </li>
+
+{% endblock %}

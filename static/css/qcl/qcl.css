@@ -1,0 +1,355 @@
+
+.late { 
+  border-style: solid !important;
+  border-color: red !important;
+  border-width: 2px !important;
+}
+
+.due-today { 
+    border-style: solid !important;
+    border-color: orange !important;
+    border-width: 2px !important;
+}
+
+[data-theme="dark"] .late { 
+  border-style: solid !important;
+  border-color: red !important;
+  border-width: 2px !important;
+}
+
+[data-theme="dark"] .due-today { 
+    border-style: solid !important;
+    border-color: orange !important;
+    border-width: 2px !important;
+}
+
+.date_approaching { 
+    color: red !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+}
+
+.business_days_past { 
+    color: gray !important;
+}
+
+.start_date_danger { 
+    color: red !important;
+    font-weight: bold !important;
+}
+
+.start_date_warning { 
+    color: orange !important;
+    font-weight: bold !important;
+}
+
+.start_date_ok { 
+    color: darkgreen !important;
+}
+
+.label-link {
+  cursor: pointer !important;
+}
+
+.label-link:hover {
+  color: #666;
+}
+
+.tooltip-wrap {
+  display: none;
+  background-color: #fff;
+  font-size: 14px;
+  color: #111;
+}
+
+[data-theme="dark"] .tooltip-wrap {
+  background-color: #222;
+  color: #ddd;
+}
+
+.patient-name:hover {
+  cursor: pointer;
+  font-weight: bold;
+  color:#333;
+}
+
+[data-theme="dark"] .patient-name:hover {
+  color:#ccc;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #4582EC;
+}
+
+.dropdown-divider {
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #e9ecef;
+}
+
+.location-indicator {
+  display: block;
+  float: left;
+
+  width: 15px;
+  height: 15px;
+
+  /* a small margin to separate the blocks */
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.table-header th {
+  background-color: #fff;
+  z-index: 99;
+}
+
+[data-theme="dark"] .table-header th {
+  background-color: #444;
+  z-index: 99;
+}
+
+.qcl-item {
+  padding: 0rem .4rem;
+  font-size: .84rem;
+  line-height: 1.5;
+  border-radius: .2rem;
+  margin-top: .3rem;
+  margin-bottom: .3rem;
+}
+
+.feather-16 {
+  width: 16px;
+  height: 16px;
+  stroke-width: 5;
+  margin-bottom: 2px;
+}
+
+.tooltip-table td {
+  padding: 0.25rem;
+}
+
+.qcl-table td {
+  padding: 0rem;
+}
+
+.qcl-table .cell {
+  padding: 0.25rem;
+}
+
+.group-icon {
+  cursor: pointer;
+  display: inline;
+  margin-top:.3rem;
+  margin-left:1rem;
+  stroke: #999;
+  fill: none;
+}
+
+.group-icon:hover {
+  stroke: #333;
+}
+
+.flag-icon:after {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+  background: url(/static/feather/icons/alert-circle.svg) no-repeat 0px 0px;
+  background-size: cover;
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+
+  vertical-align: middle;
+}
+
+.flag-large:after {
+  height: 30px;
+  width: 30px;
+}
+
+.flag-warning:after {
+  filter: invert(65%) sepia(98%) saturate(1609%) hue-rotate(357deg) brightness(98%) contrast(108%);
+}
+
+.flag-bold {
+  font-weight: bold;
+}
+
+.flag-error {
+  color: #ff0000;
+}
+
+.flag-warning {
+  color: #ffa500;
+}
+
+.flag-large {
+  font-size: 16pt;
+}
+
+.flag {
+  position: relative;
+  cursor: pointer;
+}
+
+.flag-row-warning {
+  background-color: #ffd394 !important;
+}
+
+[data-theme="dark"] .flag-row-warning  {
+  background-color: #cc5500 !important;
+}
+
+.flag-row-error {
+  background-color: #ffb2ae !important;
+}
+
+[data-theme="dark"] .flag-row-error  {
+  background-color: #8b0000 !important;
+}
+
+/* Flag text */
+.flag .flagtext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  opacity: 0.9;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-weight: normal;
+  font-size: 14px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 100;
+}
+
+[data-theme="dark"] .flag .flagtext {
+  background-color: #111;
+  color: #fff;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.flag:hover .flagtext {
+  visibility: visible;
+}
+
+.flag .flagtext {
+  width: 300px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -150px;
+}
+
+.flag .flagtext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+[data-theme="dark"] .flag .flagtext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #111 transparent transparent transparent;
+}
+
+.task-group {
+  width: 200px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+.task-group:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.task-next {
+  width: 150px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+.task-next:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.task-next-complete {
+  background-color: #beb;
+  color: #000;
+}
+
+.task-next-overdue {
+  background-color: #ffb2ae;
+  color: #000;
+}
+
+.task-next-due {
+  background-color: #ffd394;
+  color: #000;
+}
+
+.last {
+  border-bottom:solid #ccc 1px;
+}
+
+
+
+.sticky-head thead th { position: sticky; top: 50px; background: white; transition: top 0.3s; padding: 5px; }
+.sticky-head-plan thead th { position: sticky; top: 0px; background: white; padding: 5px; }
+
+[data-theme="dark"] .sticky-head thead th { background: #444; }
+[data-theme="dark"] .sticky-head-plan thead th { background: #444; }
+
+.sticky-filter { position: sticky; top: 50px; background: #fff; transition: top 0.3s; padding: 15px; z-index: 999; }
+[data-theme="dark"] .sticky-filter { background: #222}
+
+.progress {background: rgba(245, 245, 245, 1); border: 0px solid rgba(245, 245, 245, 1); border-radius: 4px; height: 8px;}
+.progress-bar-custom {background: rgba(175, 181, 186, 1);}
+
+.navbar {
+  top: 0; /* Stay on top */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}

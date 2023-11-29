@@ -1,0 +1,10 @@
+.dataweb-select {
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.machine-dropdown-width{
+    max-width: 150px;
+}

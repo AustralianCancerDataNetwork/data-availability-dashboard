@@ -1,0 +1,1 @@
+fed-logo.png: https://www.inovex.de/de/blog/federated-learning-frameworks-part-2/

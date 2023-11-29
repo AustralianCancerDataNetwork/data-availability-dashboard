@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "dashboard"
+version = "0.1.0"
+description = "AusCAT dashboarding template"
+authors = ["Daniel Al Mouiee <d.almouiee@unsw.edu.au>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^3.2.13"
+django-plotly-dash = "<=1.7.1"
+numpy = "^1.22.2"
+pandas = "^1.4.1"
+pylint = "^2.12.2"
+pylint-django = "^2.5.2"
+black = "^22.1.0"
+watchdog = "^2.1.6"
+pytest-django = "^4.5.2"
+bandit = "^1.7.2"
+argh = "^0.26.2"
+dash-bootstrap-components = "<=1.0.3"
+dpd-static-support = "^0.0.5"
+django-bootstrap4 = "^21.2"
+django-menu-generator = "^1.1.0"
+whitenoise = "^6.0.0"
+dash-table = "4.11.3"
+openpyxl = "^3.0.9"
+psycopg2-binary = "^2.9.3"
+Werkzeug = "2.0"
+django-celery-beat = "2.2.0"
+celery = "^5.2.7"
+redis = "^4.3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+Sphinx = "^5.1.1"
+sphinxcontrib-napoleon = "^0.7"
+sphinx-theme = "^1.0"
+nbstripout = "^0.6.0"
+furo = "^2022.6.21"
+nbsphinx = "^0.8.9"
+m2r2 = "^0.3.2"
+MarkupSafe = "^2.1.1"
+recommonmark = "^0.7.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
