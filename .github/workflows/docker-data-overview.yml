@@ -47,13 +47,13 @@ jobs:
     - name: Build and push Docker Image to Dockerhub 
       uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
       with:
-        context: ./dashboard
+        context: ./
         push: true
         tags: auscat/data_availability_dashboard:latest
 
     - name: Build and Push Docker Image to GHCR
       uses: docker/build-push-action@v3
       with:
-        context: ./dashboard
+        context: ./
         push: true
         tags: ghcr.io/australiancancerdatanetwork/auscat/data_availability_dashboard:latest
